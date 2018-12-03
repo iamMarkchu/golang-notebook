@@ -1,4 +1,4 @@
-在学习一门语言的时候，了解一下通用，常规的代码结构，有益于写出符合易于维护的代码。
+在学习一门语言的时候，了解一下通用，常规的代码组织结构，有益于写出符合易于维护的代码。
 
 ## 概览
 
@@ -48,7 +48,13 @@ src/
 > A typical workspace contains many source repositories containing many packages and commands. Most Go programmers keep all their Go source code and dependencies in a single workspace
 
 ## GOPATH环境变量
-`GOPATH` 
+`GOPATH` 环境变量是描述你的工作空间的目录所在位置的，默认是指向是home目录的go文件夹下，所以，在Unix系统中是`$HOME/go`，在Windows中是`C:\Users\YourName\go`，如果你想指定其他地方为工作空间，可以设置`GOPATH`环境变量，一般是加一个目录，而不是替换
 
 ## Import paths
+
+导出路径是能唯一标识一个包的字符串，一个包的导出路径对应它在你的工作空间的位置或者远程仓库
+
+标准库中的包，都是比较短的导出路径，比如 `fmt`，`net/http`
+
+如果你的包托管在一些版本控制仓库中，比如在 `Github`中，那么包的导出路径会是这个样子: `github.com/iamMarkChu/strings`
 
